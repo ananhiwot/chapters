@@ -1639,7 +1639,7 @@ box-shadow:var(--shadow);
 }
 
 #mobileNavigator button{
-
+display:none;
 width:42px;
 
 height:34px;
@@ -1661,7 +1661,7 @@ font-weight:bold;
 }
 
 #mobileGradeTitle{
-
+display:none;
 font-weight:700;
 
 font-size:.9rem;
