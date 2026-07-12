@@ -1419,3 +1419,169 @@ align-items:center;
 animation:correctPulse .3s;
 
 }
+
+/* ==========================================================
+   MOBILE (≤600px)
+   ========================================================== */
+
+@media (max-width:600px){
+
+body{
+
+overflow:auto;
+
+height:auto;
+
+padding:.35rem;
+
+}
+
+/* Smaller header */
+
+header{
+
+height:2.6rem;
+
+padding:.2rem;
+
+}
+
+header h1{
+
+font-size:.95rem;
+
+}
+
+header p{
+
+display:none;
+
+}
+
+/* Compact subject buttons */
+
+#subjects{
+
+gap:.25rem;
+
+}
+
+.subject{
+
+padding:.3rem .55rem;
+
+font-size:.65rem;
+
+}
+
+/* Dashboard becomes a single row */
+
+#dashboard{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:.25rem;
+
+}
+
+.stat{
+
+height:2rem;
+
+padding:0 .4rem;
+
+font-size:.65rem;
+
+flex:1 1 48%;
+
+}
+
+.stat h3{
+
+display:none;
+
+}
+
+.stat span{
+
+font-size:.8rem;
+
+}
+
+/* Stack the main sections */
+
+main{
+
+display:flex;
+
+flex-direction:column;
+
+height:auto;
+
+gap:.5rem;
+
+}
+
+/* Available Chapters */
+
+#game{
+
+height:35vh;
+
+}
+
+#chapterPool{
+
+height:100%;
+
+overflow-y:auto;
+
+}
+
+/* Grade boxes stack vertically */
+
+#grades{
+
+display:flex;
+
+flex-direction:column;
+
+gap:.45rem;
+
+}
+
+.gradeBox{
+
+height:180px;
+
+}
+
+.dropZone{
+
+overflow-y:auto;
+
+}
+
+/* Bottom AI panel */
+
+#copilot{
+
+left:.5rem;
+
+right:.5rem;
+
+width:auto;
+
+bottom:.5rem;
+
+}
+
+#copilot.open{
+
+height:70vh;
+
+}
+
+}
