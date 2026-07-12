@@ -167,6 +167,7 @@ backdrop-filter:blur(12px);
 border-radius:var(--radius);
 
 box-shadow:var(--shadow);
+height:42px;
 
 }
 
@@ -190,6 +191,7 @@ opacity:.75;
 
 margin-top:.15rem;
 
+display:none;
 }
 
 
@@ -1476,25 +1478,47 @@ font-size:.65rem;
 
 /* Dashboard becomes a single row */
 
+/* ---------- COMPACT STATUS BAR ---------- */
+
 #dashboard{
 
 display:flex;
 
-flex-wrap:wrap;
+align-items:center;
 
-gap:.25rem;
+justify-content:space-between;
+
+gap:.6rem;
+
+padding:.25rem .6rem;
+
+background:rgba(255,255,255,.72);
+
+backdrop-filter:blur(10px);
+
+border-radius:.6rem;
+
+box-shadow:var(--shadow);
+
+min-height:34px;
 
 }
 
 .stat{
 
-height:2rem;
+display:flex;
 
-padding:0 .4rem;
+align-items:center;
 
-font-size:.65rem;
+gap:.25rem;
 
-flex:1 1 48%;
+background:none;
+
+box-shadow:none;
+
+padding:0;
+
+height:auto;
 
 }
 
@@ -1506,7 +1530,9 @@ display:none;
 
 .stat span{
 
-font-size:.8rem;
+font-size:.78rem;
+
+font-weight:700;
 
 }
 
