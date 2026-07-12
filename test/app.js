@@ -1388,3 +1388,122 @@ function celebrate(){
 /*********************************************************************
  END OF PART 3
 *********************************************************************/
+
+
+/****************************************************************
+MOBILE GRADE NAVIGATION
+****************************************************************/
+
+const gradeSequence=["9","10","11","12"];
+
+let mobileGradeIndex=0;
+
+const mobileTitle=document.getElementById("mobileGradeTitle");
+
+const prevButton=document.getElementById("prevGrade");
+
+const nextButton=document.getElementById("nextGrade");
+
+const indicators=document.querySelectorAll(".gradeIndicator");
+
+function updateMobileGrade(){
+
+if(window.innerWidth>700){
+
+document.querySelectorAll(".gradeBox").forEach(box=>{
+
+box.classList.remove("mobileActive");
+
+});
+
+return;
+
+}
+
+document.querySelectorAll(".gradeBox").forEach(box=>{
+
+box.classList.remove("mobileActive");
+
+});
+
+const grade=gradeSequence[mobileGradeIndex];
+
+const active=document.querySelector(
+
+`.gradeBox[data-grade="${grade}"]`
+
+);
+
+if(active){
+
+active.classList.add("mobileActive");
+
+}
+
+mobileTitle.textContent="Grade "+grade;
+
+indicators.forEach(btn=>{
+
+btn.classList.remove("active");
+
+if(btn.dataset.grade===grade){
+
+btn.classList.add("active");
+
+}
+
+});
+
+}
+
+prevButton.onclick=function(){
+
+mobileGradeIndex--;
+
+if(mobileGradeIndex<0){
+
+mobileGradeIndex=3;
+
+}
+
+updateMobileGrade();
+
+}
+
+nextButton.onclick=function(){
+
+mobileGradeIndex++;
+
+if(mobileGradeIndex>3){
+
+mobileGradeIndex=0;
+
+}
+
+updateMobileGrade();
+
+}
+
+indicators.forEach(btn=>{
+
+btn.onclick=function(){
+
+mobileGradeIndex=
+
+gradeSequence.indexOf(btn.dataset.grade);
+
+updateMobileGrade();
+
+}
+
+});
+
+window.addEventListener(
+
+"resize",
+
+updateMobileGrade
+
+);
+
+updateMobileGrade();
