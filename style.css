@@ -559,7 +559,6 @@ min-height:0;
 
 }
 
-/*
 .gradeBox h2{
 
 font-size:.9rem;
@@ -570,7 +569,7 @@ margin-bottom:.4rem;
 
 }
 
-*/
+
 
 .gradeBox h2{
 
@@ -1639,7 +1638,7 @@ box-shadow:var(--shadow);
 }
 
 #mobileNavigator button{
-display:none;
+
 width:42px;
 
 height:34px;
@@ -1661,7 +1660,7 @@ font-weight:bold;
 }
 
 #mobileGradeTitle{
-display:none;
+
 font-weight:700;
 
 font-size:.9rem;
@@ -1672,7 +1671,7 @@ color:var(--primary);
 
 #mobileIndicators{
 
-display:none;
+
 
 justify-content:center;
 
